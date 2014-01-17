@@ -1,0 +1,48 @@
+#!/bin/sh
+
+pngtopnm images/battery_per0.png > battery_per0.pnm
+pngtopnm images/battery_per10.png > battery_per10.pnm
+pngtopnm images/battery_per20.png > battery_per20.pnm
+pngtopnm images/battery_per30.png > battery_per30.pnm
+pngtopnm images/battery_per40.png > battery_per40.pnm
+pngtopnm images/battery_per50.png > battery_per50.pnm
+pngtopnm images/battery_per60.png > battery_per60.pnm
+pngtopnm images/battery_per70.png > battery_per70.pnm
+pngtopnm images/battery_per80.png > battery_per80.pnm
+pngtopnm images/battery_per90.png > battery_per90.pnm
+pngtopnm images/battery_per100.png > battery_per100.pnm
+pngtopnm images/battery_full.png > battery_full.pnm
+pngtopnm images/battery_fail.png > battery_fail.pnm
+pngtopnm images/low_battery.png > low_battery.pnm
+
+pnmquant 224 battery_per0.pnm > battery_per0_clut224.pnm
+pnmquant 224 battery_per10.pnm > battery_per10_clut224.pnm
+pnmquant 224 battery_per20.pnm > battery_per20_clut224.pnm
+pnmquant 224 battery_per30.pnm > battery_per30_clut224.pnm
+pnmquant 224 battery_per40.pnm > battery_per40_clut224.pnm
+pnmquant 224 battery_per50.pnm > battery_per50_clut224.pnm
+pnmquant 224 battery_per60.pnm > battery_per60_clut224.pnm
+pnmquant 224 battery_per70.pnm > battery_per70_clut224.pnm
+pnmquant 224 battery_per80.pnm > battery_per80_clut224.pnm
+pnmquant 224 battery_per90.pnm > battery_per90_clut224.pnm
+pnmquant 224 battery_per100.pnm > battery_per100_clut224.pnm
+pnmquant 224 battery_full.pnm > battery_full_clut224.pnm
+pnmquant 224 battery_fail.pnm > battery_fail_clut224.pnm
+pnmquant 224 low_battery.pnm > low_battery_clut224.pnm
+
+pnmtoplainpnm battery_per0_clut224.pnm > logo_battery_per0_clut224.ppm
+pnmtoplainpnm battery_per10_clut224.pnm > logo_battery_per10_clut224.ppm
+pnmtoplainpnm battery_per20_clut224.pnm > logo_battery_per20_clut224.ppm
+pnmtoplainpnm battery_per30_clut224.pnm > logo_battery_per30_clut224.ppm
+pnmtoplainpnm battery_per40_clut224.pnm > logo_battery_per40_clut224.ppm
+pnmtoplainpnm battery_per50_clut224.pnm > logo_battery_per50_clut224.ppm
+pnmtoplainpnm battery_per60_clut224.pnm > logo_battery_per60_clut224.ppm
+pnmtoplainpnm battery_per70_clut224.pnm > logo_battery_per70_clut224.ppm
+pnmtoplainpnm battery_per80_clut224.pnm > logo_battery_per80_clut224.ppm
+pnmtoplainpnm battery_per90_clut224.pnm > logo_battery_per90_clut224.ppm
+pnmtoplainpnm battery_per100_clut224.pnm > logo_battery_per100_clut224.ppm
+pnmtoplainpnm battery_full_clut224.pnm > logo_battery_full_clut224.ppm
+pnmtoplainpnm battery_fail_clut224.pnm > logo_battery_fail_clut224.ppm
+pnmtoplainpnm low_battery_clut224.pnm > logo_low_battery_clut224.ppm
+
+rm *.pnm
